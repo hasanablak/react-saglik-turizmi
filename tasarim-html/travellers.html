@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap demo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<section class="vh-75">
+		<div class="container h-100 mt-5" style="border-radius: 15px; border:1px dashed #000">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="card mt-2 text-center">
+						<label for="">Menü</label>
+						<ul class="list-group">
+							<li class="list-group-item active">
+								Yolcular
+							</li>
+							<li class="list-group-item">
+								Transferler
+							</li>
+							<li class="list-group-item">
+								Arabalar
+							</li>
+							<li class="list-group-item">
+								Kullanıcılar
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<div class="row d-flex">
+						<div class="col-md-12">
+							<div class="row py-2">
+								<div class="col-md-2">
+									<h5 class="header">
+										All Traveller
+									</h5>
+								</div>
+								<div class="col offset-md-8">
+									<label for="">Tip Seçimi Yapabilirsiniz</label>
+									<select name="" id="" class="form-control select">
+										<option value="">Hasta</option>
+										<option value="">Hastane Personeli</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row d-flex">
+						<div class="col">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>
+											Transport Başlangıç/Bitiş
+										</th>
+										<th>
+											Adı Soyadı
+										</th>
+										<th>
+											E-posta
+										</th>
+										<th>
+											Tip
+										</th>
+										<th>İşlemler</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											İstanbul Kağıthane Merkez <br> Sakarya Serdivan merkez
+										</td>
+										<td>
+											Hasan Ablak
+										</td>
+										<td>
+											0hasanablak@gmail.com
+										</td>
+										<td>
+											Hasta
+										</td>
+										<td>
+											<button class="btn">Düzenle</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+	</script>
+</body>
+
+</html>
