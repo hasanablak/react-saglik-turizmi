@@ -1,3 +1,3 @@
-export default function GuestLayout() {
-	return null;
+export default function GuestLayout({ children }) {
+	return children;
 }
