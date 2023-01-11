@@ -1,11 +1,11 @@
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { Login, Cars, CarCreate, CarUpdate } from "../pages"
+import { Users, UserCreate, UserUpdate } from "../pages"
 import { useSelector } from "react-redux";
 import Layout from "../layouts";
 import AuthLayout from "../layouts/auth-layout";
 import GuestLayout from "../layouts/guest-layout";
 export default function Index() {
-
 	return (
 		<Layout>
 			<Routes>
@@ -30,24 +30,40 @@ export default function Index() {
 						</RequireAuth>
 				} />
 
+				
+				<Route path="/users" element={
+						<RequireAuth>
+							<Users />
+						</RequireAuth>
+				} />
+				<Route path="/users/create" element={
+						<RequireAuth>
+							<UserCreate />
+						</RequireAuth>
+				} />
+				<Route path="/users/:user" element={
+						<RequireAuth>
+							<UserUpdate />
+						</RequireAuth>
+				} />
 			</Routes>
 		</Layout>
 	)
 }
+
 function NoRequireAuth({ children }) {
 	const { token } = useSelector(state => state.auth); 
 	let location = useLocation();
-	
 	if (token) {
 		return <Navigate to="/dashboard" state={{ from: location }} replace />;
 	}
-	return children;
+	return <GuestLayout>{children}</GuestLayout>;
 }
 
 function RequireAuth({ children }) {
-	const { token } = useSelector(state => state.auth); 
+	//const { token } = useSelector(state => state.auth); 
 	let location = useLocation();
-	
+	let token = true;
 	if (!token) {
 		return <Navigate to="/" state={{ from: location }} replace />;
 	}
