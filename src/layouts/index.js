@@ -1,7 +1,7 @@
 export default function Layout({ children }) {
 	return (
-		<section className="vh-100">
-			<div className="container py-5 h-100">
+		<section className="vh-75">
+			<div className="container h-100 mt-5 p-3 dashed" >
 				{children}
 			</div>
 		</section>
