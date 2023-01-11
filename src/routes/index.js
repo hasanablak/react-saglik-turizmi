@@ -2,6 +2,9 @@ import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { Login, Cars, CarCreate, CarUpdate } from "../pages"
 import { Users, UserCreate, UserUpdate } from "../pages"
 import { Transports, TransportCreate, TransportUpdate } from "../pages"
+import { Travellers } from "../pages"
+
+
 import { useSelector } from "react-redux";
 import Layout from "../layouts";
 import AuthLayout from "../layouts/auth-layout";
@@ -61,6 +64,12 @@ export default function Index() {
 				<Route path="/transports/:transport/update" element={
 					<RequireAuth>
 						<TransportUpdate />
+					</RequireAuth>
+				} />
+
+				<Route path="/travellers" element={
+					<RequireAuth>
+						<Travellers />
 					</RequireAuth>
 				} />
 			</Routes>
