@@ -9,8 +9,22 @@
 
 .header{
 	text-decoration: dashed;
+	background-color: rgb(13 110 253);
+	color:#fff;
+}
+.header .btn{
+	color:#fff;
+	border-color: #fff!important;
+}
+.header .btn:hover{
+	color:rgb(13 110 253);;
+	background-color: #fff;
+	border-color: #000!important;
 }
 
 .text-throught{
 	 text-decoration: line-through;
+}
+.form-group{
+	margin-bottom:5px;
 }
