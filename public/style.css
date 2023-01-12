@@ -1,30 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
-.form-control, .btn, .card, .dashed{
-	border:1px dashed #000!important;
-	border-radius:10px!important;
+
+.form-control,
+.btn,
+.card,
+.dashed {
+	border: 1px dashed #000 !important;
+	border-radius: 10px !important;
 }
-*{
+
+* {
 	font-family: 'Handlee', cursive;
 }
 
-.header{
+.header {
 	text-decoration: dashed;
-	background-color: rgb(13 110 253);
-	color:#fff;
-}
-.header .btn{
-	color:#fff;
-	border-color: #fff!important;
-}
-.header .btn:hover{
-	color:rgb(13 110 253);;
-	background-color: #fff;
-	border-color: #000!important;
+	background-color: #7066e0;
+	color: #fff;
 }
 
-.text-throught{
-	 text-decoration: line-through;
+.header .btn {
+	color: #fff;
+	border-color: #fff !important;
 }
-.form-group{
-	margin-bottom:5px;
+
+.header .btn:hover {
+	color: #7066e0;
+	;
+	background-color: #fff;
+	border-color: #000 !important;
+}
+
+.text-throught {
+	text-decoration: line-through;
+}
+
+.form-group {
+	margin-bottom: 5px;
+}
+
+.btn-primary,
+.list-group-item.active {
+	background-color: #7066e0;
 }
