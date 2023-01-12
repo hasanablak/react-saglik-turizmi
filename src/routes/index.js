@@ -80,6 +80,7 @@ export default function Index() {
 function NoRequireAuth({ children }) {
 	const { token } = useSelector(state => state.auth);
 	let location = useLocation();
+
 	if (token) {
 		return <Navigate to="/travellers" state={{ from: location }} replace />;
 	}
@@ -87,9 +88,8 @@ function NoRequireAuth({ children }) {
 }
 
 function RequireAuth({ children }) {
-	//const { token } = useSelector(state => state.auth); 
+	const { token } = useSelector(state => state.auth);
 	let location = useLocation();
-	let token = true;
 	if (!token) {
 		return <Navigate to="/" state={{ from: location }} replace />;
 	}
