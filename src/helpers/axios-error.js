@@ -22,7 +22,7 @@ export function AxiosError() {
 
 				Object.keys(errorData).forEach(function (errorKey, errorIndex) {
 					errorData[errorKey].forEach(function (inErrorKey, inErrorIndex) {
-						errors += inErrorKey
+						errors += inErrorKey + '<br>'
 					})
 				})
 
@@ -30,7 +30,7 @@ export function AxiosError() {
 					.fire({
 						icon: "info",
 						title: "Validation warning",
-						text: errors,
+						html: errors,
 						confirmButtonText: "Okey"
 					});
 			} else {
