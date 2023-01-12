@@ -81,7 +81,7 @@ function NoRequireAuth({ children }) {
 	const { token } = useSelector(state => state.auth);
 	let location = useLocation();
 	if (token) {
-		return <Navigate to="/dashboard" state={{ from: location }} replace />;
+		return <Navigate to="/travellers" state={{ from: location }} replace />;
 	}
 	return <GuestLayout>{children}</GuestLayout>;
 }
