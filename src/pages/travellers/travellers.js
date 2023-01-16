@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { Header } from "../../components";
 
-export default function Users() {
+export default function Travellers() {
+	const navigate = useNavigate();
 	return (
 		<>
-			<Header header="Bütün Kullanıcılar">
+			<Header header="Bütün Yolcular">
 				<label>Tip Seçimi Yapabilirsiniz</label>
 				<select name="" id="" className="form-control select">
 					<option value="">Hasta</option>
@@ -31,7 +33,8 @@ export default function Users() {
 								</td>
 								<td>Hasta</td>
 								<td>
-									<button className="btn">Düzenle</button>
+									<button className="btn" onClick={() => navigate('/users/1')}>Kullanıcıyı Düzenle</button>
+									<button className="btn" onClick={() => navigate('/transports/1')}>Yolculuğu Düzenle</button>
 								</td>
 							</tr>
 						</tbody>
