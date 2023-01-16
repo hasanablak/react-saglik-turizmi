@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { Login, Cars, CarCreate, CarUpdate } from "../pages"
 import { Users, UserCreate, UserUpdate } from "../pages"
-import { Transports, TransportCreate, TransportUpdate } from "../pages"
+import { Transports, TransportCreate, TransportUpdate, TransportDetails } from "../pages"
 import { Travellers } from "../pages"
 
 
@@ -61,9 +61,14 @@ export default function Index() {
 						<TransportCreate />
 					</RequireAuth>
 				} />
-				<Route path="/transports/:transport/update" element={
+				<Route path="/transports/:transport" element={
 					<RequireAuth>
 						<TransportUpdate />
+					</RequireAuth>
+				} />
+				<Route path="/transports/:transport/details" element={
+					<RequireAuth>
+						<TransportDetails />
 					</RequireAuth>
 				} />
 
