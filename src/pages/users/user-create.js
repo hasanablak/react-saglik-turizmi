@@ -47,7 +47,7 @@ export default function UserCreate() {
 	return (
 		<>
 			<Header header="Kullanıcı Ekleme">
-				<button className="btn btn-outline-primary">Bütün Kullanıcılar</button>
+				<button className="btn btn-outline-primary" onClick={() => navigate('/users')}>Bütün Kullanıcılar</button>
 			</Header>
 			<div className="row d-flex">
 				<form onSubmit={submitForm} id="userCreateForm">
