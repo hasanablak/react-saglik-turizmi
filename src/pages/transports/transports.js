@@ -1,10 +1,11 @@
 import { Header } from "../../components";
-
+import { useNavigate } from "react-router-dom";
 export default function Transports() {
+	const navigate = useNavigate();
 	return (
 		<>
 			<Header header="All Transports">
-				<button className="btn btn-outline-primary">+ Yeni Sefer Ekle</button>
+				<button className="btn btn-outline-primary" onClick={() => navigate('create')}>+ Yeni Sefer Ekle</button>
 			</Header>
 			<div className="row	d-flex">
 				<div className="col">
@@ -27,8 +28,8 @@ export default function Transports() {
 								<td>İstanbul Kağıthane Merkez</td>
 								<td>12</td>
 								<td>
-									<button className="btn">Detaylar</button>
-									<button className="btn">Düzenle</button>
+									<button className="btn" onClick={() => navigate('1/details')}>Detaylar</button>
+									<button className="btn" onClick={() => navigate('1')}>Düzenle</button>
 									<button className="btn btn-danger">Sil</button>
 								</td>
 							</tr>

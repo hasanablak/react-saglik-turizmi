@@ -1,10 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { Header } from "../../components";
 
 export default function TransportUpdate() {
+	const navigate = useNavigate();
 	return (
 		<>
-			<Header header="Seferi Düzenle">
-				<button className="btn btn-outline-primary">Bütün Seferler</button>
+			<Header header="Transferi Düzenle">
+				<button className="btn btn-outline-primary" onClick={() => navigate('/transports')}>Bütün Seferler</button>
 			</Header>
 			<div className="row	d-flex">
 				<div className="col">
@@ -26,7 +28,7 @@ export default function TransportUpdate() {
 								<div className="form-group">
 									<label>Başlangıç Şehir</label>
 									<select name="driver" id="driver" className="form-control">
-										<option value={1}>Hasan Ablak</option>
+										<option value={1}>İstanbul</option>
 										<option value={2}>Melih Gökçe</option>
 										<option value={3}>Hamit Altuntop</option>
 									</select>
@@ -36,7 +38,7 @@ export default function TransportUpdate() {
 								<div className="form-group">
 									<label>Başlangıç İlçe</label>
 									<select name="driver" id="driver" className="form-control">
-										<option value={1}>Hasan Ablak</option>
+										<option value={1}>Kağıthane</option>
 										<option value={2}>Melih Gökçe</option>
 										<option value={3}>Hamit Altuntop</option>
 									</select>
@@ -46,7 +48,7 @@ export default function TransportUpdate() {
 								<div className="form-group">
 									<label>Başlangıç Mahalle</label>
 									<select name="driver" id="driver" className="form-control">
-										<option value={1}>Hasan Ablak</option>
+										<option value={1}>Merkez</option>
 										<option value={2}>Melih Gökçe</option>
 										<option value={3}>Hamit Altuntop</option>
 									</select>
@@ -58,7 +60,7 @@ export default function TransportUpdate() {
 								<div className="form-group">
 									<label>Bitiş Şehir</label>
 									<select name="driver" id="driver" className="form-control">
-										<option value={1}>Hasan Ablak</option>
+										<option value={1}>Sakarya</option>
 										<option value={2}>Melih Gökçe</option>
 										<option value={3}>Hamit Altuntop</option>
 									</select>
@@ -68,7 +70,7 @@ export default function TransportUpdate() {
 								<div className="form-group">
 									<label>Bitiş İlçe</label>
 									<select name="driver" id="driver" className="form-control">
-										<option value={1}>Hasan Ablak</option>
+										<option value={1}>Serdivan</option>
 										<option value={2}>Melih Gökçe</option>
 										<option value={3}>Hamit Altuntop</option>
 									</select>
@@ -78,7 +80,7 @@ export default function TransportUpdate() {
 								<div className="form-group">
 									<label>Bitiş Mahalle</label>
 									<select name="driver" id="driver" className="form-control">
-										<option value={1}>Hasan Ablak</option>
+										<option value={1}>Merkez</option>
 										<option value={2}>Melih Gökçe</option>
 										<option value={3}>Hamit Altuntop</option>
 									</select>
@@ -91,7 +93,7 @@ export default function TransportUpdate() {
 								<div className="col dashed m-2">
 									<label htmlFor="">Seçilebilir Yolcular</label>
 									<div style={{ height: 100 }}>
-										Hasan Ablak
+										Ali Rıza Ergüç
 										<button className="btn btn-outline-warning ">Hasta</button>
 										<button className="btn  btn-outline-warning">
 											Hastane Personeli
@@ -107,7 +109,7 @@ export default function TransportUpdate() {
 								<div className="col dashed m-2">
 									<label htmlFor="">Seçilen Yolcular</label>
 									<div style={{ height: 100 }}>
-										Hasan Ablak
+										Mehmet Akkuş
 										<button className="btn btn-outline-warning active">Hasta</button>
 										<button className="btn  btn-outline-warning">
 											Hastane Personeli

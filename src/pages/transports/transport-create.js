@@ -1,10 +1,11 @@
 import { Header } from "../../components";
-
+import { useNavigate } from "react-router-dom";
 export default function TransportCreate() {
+	const navigate = useNavigate();
 	return (
 		<>
 			<Header header="Sefer Oluştur">
-				<button className="btn btn-outline-primary">Bütün Seferler</button>
+				<button className="btn btn-outline-primary" onClick={() => navigate('/transports')}>Bütün Seferler</button>
 			</Header>
 			<div className="row	d-flex">
 				<div className="col">
