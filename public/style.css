@@ -42,3 +42,7 @@
 .list-group-item.active {
 	background-color: #7066e0;
 }
+
+.list-group.menu>.list-group-item {
+	cursor: pointer;
+}
