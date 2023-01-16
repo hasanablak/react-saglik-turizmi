@@ -1,10 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { Header } from "../../components";
 
-export default function	CarCreate()	{
+export default function CarCreate() {
+	const navigate = useNavigate();
 	return (
 		<>
 			<Header header="Araç Ekleme">
-					<button className="btn btn-outline-primary">Bütün araçlar</button>
+				<button className="btn btn-outline-primary" onClick={() => navigate('/cars')}>Bütün araçlar</button>
 			</Header>
 			<div className="row	d-flex">
 				<div className="col">
