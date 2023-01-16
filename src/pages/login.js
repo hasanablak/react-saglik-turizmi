@@ -3,20 +3,25 @@ import { useState, useEffect } from "react"
 import { useDispatch } from "react-redux";
 import { setAuth } from "../stores/auth";
 import axios from "axios";
+import { TxtLoading } from "../components";
 
 export default function Login() {
 
 	const [credenditinal, setCredentinal] = useState({ email: "", password: "" });
+	const [loading, setLoading] = useState(false);
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
 
 	const sendLoginForm = async (e) => {
 		e.preventDefault();
-
+		setLoading(true);
 		await axios.post(process.env.REACT_APP_API_URL + "/login", credenditinal)
 			.then((e) => {
 				loginWasSuccessfully(e)
+				setLoading(false);
+			}).catch((e) => {
+				setLoading(false);
 			});
 
 	}
@@ -54,10 +59,13 @@ export default function Login() {
 										className="form-control form-control-lg" />
 								</div>
 								<div className="form-outline flex-fill my-3 mt-3">
-									<input
-										type="submit"
-										className="form-control form-control-md"
-										value="Login" />
+									<button disabled={loading} type="submit"
+										className="form-control form-control-md">
+										{loading ?
+											<TxtLoading /> :
+											'Giriş yap'
+										}
+									</button>
 								</div>
 							</form>
 						</div>
